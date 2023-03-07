@@ -31,6 +31,7 @@ jobs:
           echo "foo bar content" > test-filename
           echo "filepath=test-filename" >> $GITHUB_ENV
 
+    # test2
     - name: Generate sha256
       run: |
           openssl dgst -sha256 "${{ env.filepath }}" | awk '{print $2}' > "${{ env.filepath }}.sha256"
